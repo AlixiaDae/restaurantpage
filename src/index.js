@@ -1,3 +1,3 @@
-import headerBar from "./pages/home";
+import headerBar from "./pages/header";
 
 headerBar()
