@@ -1,5 +1,6 @@
 import '../styles/home.css'
 import Salad from '../images/salad.jpg'
+import Salad2 from '../images/mariana-medvedeva-fk6IiypMWss-unsplash.jpg'
 
 function headerBar() {
     const headerContainer = document.createElement('div')
@@ -81,22 +82,30 @@ function content() {
     const subHeadWrapper = document.createElement('div')
     const subHeader = document.createElement('h2')
     const sub = document.createElement('div')
+    const saladWrapper =document.createElement('div')
+    const saladCard = document.createElement('img')
     const salad = document.createElement('img')
 
     subHeader.textContent = "Looking to refresh yourself?"
-    sub.textContent = `Here at Salad Bowl it is our belief that fresh and healthy are the best ingredients to a green and peaceful lifestyle! Sourced from local ingredients, our bowls are guaranteed to reflect nature around us, which means, other than our regular menu, each location may have their very own specialties.`;
+    sub.textContent = `Here at Salad Bowl it is our belief that fresh and healthy are the best ingredients to a green and peaceful lifestyle! Sourced from local ingredients, our bowls are guaranteed to reflect nature around us. Which means, other than our regular menu, each location may have their very own specialties!`;
 
     contentContainer.classList.add('content-container')
     subHeadWrapper.classList.add('sub-wrapper')
     subHeader.classList.add('sub-header')
     sub.classList.add('sub')
+    saladWrapper.classList.add('salad-wrapper')
+    saladCard.classList.add('salad-2')
     salad.classList.add('salad')
 
     salad.src = Salad
+    saladCard.src = Salad2
+
     subHeadWrapper.appendChild(subHeader)
     subHeadWrapper.appendChild(sub)
+    saladWrapper.appendChild(saladCard)
+    saladWrapper.appendChild(salad)
     contentContainer.appendChild(subHeadWrapper)
-    contentContainer.appendChild(salad)
+    contentContainer.appendChild(saladWrapper)
 
     return document.body.appendChild(contentContainer)
 }
