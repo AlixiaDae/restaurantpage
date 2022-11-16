@@ -1,3 +1,3 @@
-import headerBar from "./pages/header";
+import render from "./pages/home";
 
-headerBar()
+render()
