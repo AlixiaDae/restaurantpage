@@ -22,10 +22,10 @@ const homePage = (() => {
         const header = document.createElement('div')
         const logo = document.createElement('h1')
         const headerPageTabs = document.createElement('div')
-        const menuBtn = document.createElement('button')
-        const locationBtn = document.createElement('button')
-        const aboutBtn = document.createElement('button')
-        const contactBtn = document.createElement('button')
+        const menuBtn = document.createElement('a')
+        const locationBtn = document.createElement('a')
+        const aboutBtn = document.createElement('a')
+        const contactBtn = document.createElement('a')
         const orderBtn = document.createElement('button')
     
         headerContainer.classList.add('header-container')
@@ -48,7 +48,8 @@ const homePage = (() => {
         locationBtn.textContent = 'Location'
         aboutBtn.textContent = 'About'
         contactBtn.textContent = 'Contact'
-    
+
+        menuBtn.href = "./menu.js"
     
         headerContainer.appendChild(header)
         header.appendChild(logo)

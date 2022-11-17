@@ -19,7 +19,7 @@ body {
 .header-bar {
     display: grid;
     grid-template-columns: repeat(5,1fr) 300px;
-    column-gap: 50px;
+
     padding: 30px 40px 30px 60px;
     height: 130px;
     align-items: center;
@@ -35,36 +35,45 @@ body {
     font-family: 'CrabSalad';
     font-size: 60px;
     flex-wrap: wrap;
-    width: 100px;
     margin: -3px;
     cursor: pointer;
+    text-align: center;
 }
 
 .order-button {
     grid-area: 1/6;
-    color: white;
+    background-color: rgb(209, 3, 3);
     height: 70px;
-    padding: 20px;
-    font-size: 20px;
-    width: 200px;
-    background-color: #d11a2a;
+    width: 190px;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-self: center;
+
     border-radius: 30px;
     border-style: none;
-    text-decoration: underline;
+    font-weight: bold;
+    color: whitesmoke;
 }
 
 .header-page-tabs {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 .tab-buttons {
     font-family: 'CrabSalad';
     background-color: transparent;
     height: 90px;
-    font-size: 34px;
+    font-size: 35px;
     border-style: none;
     font-weight: bold;
+    margin-top: 40px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .main-content-wrapper {
@@ -295,19 +304,10 @@ body {
 
 .search-button:hover {
     background-color: rgb(139, 34, 34);
-    
 }
 
 .tab-buttons:hover {
-    font-size: 34px;
-    margin: -1px;
     text-decoration: underline;
-}
-
-.order-button:hover {
-    background-color: #a31621;
-    font-size: 25px;
-    margin: -1px;
 }
 
 .footer-left > p:hover {
