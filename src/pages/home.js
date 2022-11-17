@@ -17,6 +17,13 @@ const homePage = (() => {
         _footer()
     }
 
+    const menuBtn = document.getElementById('menu-button')
+    const firstItemText = document.getElementById('first-item-button')
+    const secondItemText = document.getElementById('second-item-button')
+    const thirdItemText = document.getElementById('third-item-button')
+
+    const domArray = [menuBtn,firstItemText,secondItemText,thirdItemText]
+
     const _headerBar = () => {
         const headerContainer = document.createElement('div')
         const header = document.createElement('div')
@@ -39,7 +46,8 @@ const homePage = (() => {
         contactBtn.classList.add('tab-buttons')
 
         headerContainer.style.backgroundImage = `url(${headerSalad})`
-    
+        
+        menuBtn.id = 'menu-button'
         contactBtn.id = 'contact-button'
     
         logo.textContent = 'Salad Bowl'
@@ -137,17 +145,21 @@ const homePage = (() => {
         const secondItemWrapper = document.createElement('div')
         const thirdItemWrapper = document.createElement('div')
         const firstItem = document.createElement('img')
-        const firstItemText = document.createElement('p')
+        const firstItemText = document.createElement('a')
         const secondItem = document.createElement('img')
-        const secondItemText = document.createElement('p')
+        const secondItemText = document.createElement('a')
         const thirdItem = document.createElement('img')
-        const thirdItemText = document.createElement('p')
+        const thirdItemText = document.createElement('a')
         const wrapperArray = [firstItemWrapper,secondItemWrapper,thirdItemWrapper]
         
         favoritesHeader.textContent = "Menu Favorites"
         firstItemText.textContent = "Farmers' Feast"
         secondItemText.textContent = "Honey Lemon"
         thirdItemText.textContent = "Strawberry Explosion"
+
+        firstItemText.id = "first-item-button"
+        secondItemText.id = "second-item-button"
+        thirdItemText.id = "third-item-button"
 
         subContentContainer2.classList.add('sub-content-container2')
         favoritesWrapper.classList.add('favorites-wrapper')
@@ -156,8 +168,11 @@ const homePage = (() => {
 
         subContentContainer2.style.backgroundImage = `url(${CuttingBoard})`
         firstItem.src = SaladItem
+        firstItemText.href = './menu.js'
         secondItem.src = SaladItem2
+        secondItemText.href = './menu.js'
         thirdItem.src = SaladItem3
+        thirdItemText.href = './menu.js'
 
         wrapperArray.forEach(wrapper => {
             itemsWrapper.appendChild(wrapper)
@@ -217,7 +232,8 @@ const homePage = (() => {
     }
 
     return {
-        render
+        render,
+        domArray
     }
 
 })()
