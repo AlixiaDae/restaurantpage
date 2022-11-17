@@ -12,7 +12,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 730px;
+    height: 790px;
     position: relative;
 }
 
@@ -91,7 +91,7 @@ body {
     align-items: center;
     width: 500px;
     gap: 20px;
-    margin-top: 50px;
+    margin-top: 150px;
     margin-left: 200px;
 }
 
@@ -139,7 +139,7 @@ body {
     column-gap: 5px;
     padding: 40px;
     height: 650px;
-    background-color: #081b02;
+    box-shadow: 0px 5px 5px grey inset;
 }
 
 .sub-wrapper {
@@ -151,19 +151,18 @@ body {
     margin-right: 160px;
     margin-top: -150px;
     padding: 50px;
-    box-shadow: -5px -5px 5px 5px rgb(170, 170, 170) inset;
     border-radius: 15px;
-    background-color: white;
-    width: 500px;
+    min-width: 500px;
+    max-width: 750px;
 }
 
 .sub-header {
     font-family: 'CrabSalad';
-    font-size: 40px;
+    font-size: 60px;
 }
 
 .sub {
-    font-size: 24px;
+    font-size: 2em;
 }
 
 .salad-wrapper {
@@ -183,17 +182,20 @@ body {
     height: 400px;
     width: 400px;
     border-radius: 30px;
+    border: 5px solid black;
 }
 
 .salad {
     grid-area: 2/2;
     margin-top: -190px;
     margin-left: -50px;
+    box-shadow: 5px 5px 5px 2px grey;
 }
 
 .salad-2 {
     grid-area: 1;
     margin-right: -90px;
+    box-shadow: -5px 5px 5px 2px grey;
 }
 
 /*Sub Content 2*/
@@ -202,7 +204,11 @@ body {
     display: flex;
     justify-content: center;
     height: 700px;
-    box-shadow: 0px 7px 5px rgb(187, 187, 187) inset;
+    padding: 30px;
+    box-shadow: 0px -5px 5px grey;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .favorites-wrapper {    
@@ -210,11 +216,12 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 10px;
+    cursor: default;
 }
 
 .favorites-header {
     font-family: 'CrabSalad';
-    font-size: 45px;
+    font-size: 50px;
 }
 
 .items-wrapper {
@@ -223,12 +230,11 @@ body {
     height: 300px;
 }
 
+
 .items-wrapper > div > p {
     font-family: 'CrabSalad';
     font-size: 37px;
 }
-
-
 
 /*Pseudo-classes*/
 
@@ -238,8 +244,7 @@ body {
 
 .search-button:hover {
     background-color: rgb(139, 34, 34);
-    font-size: 25px;
-    margin: -1px;
+    
 }
 
 .tab-buttons:hover {
@@ -250,4 +255,6 @@ body {
 
 .order-button:hover {
     background-color: #a31621;
+    font-size: 25px;
+    margin: -1px;
 }

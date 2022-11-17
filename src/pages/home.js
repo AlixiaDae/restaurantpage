@@ -2,6 +2,7 @@ import '../styles/home.css'
 import headerSalad from '../images/louis-hansel-MlPD-AzZYMg-unsplash.jpg'
 import Salad from '../images/salad.jpg'
 import Salad2 from '../images/mariana-medvedeva-fk6IiypMWss-unsplash.jpg'
+import CuttingBoard from '../images/lukas-blazek-f-TWhXOrLiU-unsplash.jpg'
 import SaladItem from '../images/anna-pelzer-IGfIGP5ONV0-unsplash.jpg'
 import SaladItem2 from '../images/freddy-g-m3OuPu9oTuY-unsplash.jpg'
 import SaladItem3 from '../images/dovile-ramoskaite-xX9SmqQCbFY-unsplash.jpg'
@@ -151,6 +152,7 @@ const homePage = (() => {
         favoritesHeader.classList.add('favorites-header')
         itemsWrapper.classList.add('items-wrapper')
 
+        subContentContainer2.style.backgroundImage = `url(${CuttingBoard})`
         firstItem.src = SaladItem
         secondItem.src = SaladItem2
         thirdItem.src = SaladItem3
