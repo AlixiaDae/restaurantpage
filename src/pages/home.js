@@ -14,6 +14,7 @@ const homePage = (() => {
         _headerContent()
         _subContent()
         _subContent2()
+        _footer()
     }
 
     const _headerBar = () => {
@@ -172,6 +173,46 @@ const homePage = (() => {
         subContentContainer2.appendChild(favoritesWrapper)
 
         return document.body.appendChild(subContentContainer2)
+    }
+
+    const _footer = () => {
+        const footerContainer = document.createElement('div')
+        const footerWrapper = document.createElement('div')
+        const footerLeft = document.createElement('div')
+        const footerRight = document.createElement('div')
+        const footerMenu = document.createElement('p')
+        const footerLocation = document.createElement('p')
+        const footerHiring = document.createElement('p')
+        const footerContact = document.createElement('p')
+        const footerCopyRight = document.createElement('div')
+        const footerLogo = document.createElement('div')
+        const footerLeftArray = [footerMenu,footerLocation,footerHiring,footerContact]
+
+        footerContainer.classList.add('footer-container')
+        footerWrapper.classList.add('footer-wrapper')
+        footerLeft.classList.add('footer-left')
+        footerRight.classList.add('footer-right')
+        footerLogo.classList.add('footer-logo')
+        footerCopyRight.classList.add('footer-copyright')
+
+        footerCopyRight.textContent = "© 2022 Salad Bowl"
+        footerLogo.textContent = "Salad Bowl"
+        footerMenu.textContent = "Menu"
+        footerLocation.textContent = "Location"
+        footerHiring.textContent = "Hiring"
+        footerContact.textContent = "Contact Us"
+        
+        footerLeftArray.forEach(p => {
+            footerLeft.appendChild(p)
+        })
+
+        footerWrapper.appendChild(footerLeft)
+        footerWrapper.appendChild(footerRight)
+        footerRight.appendChild(footerLogo)
+        footerRight.appendChild(footerCopyRight)
+        footerContainer.appendChild(footerWrapper)
+
+        return document.body.appendChild(footerContainer)
     }
 
     return {
