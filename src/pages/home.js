@@ -6,6 +6,7 @@ import CuttingBoard from '../images/lukas-blazek-f-TWhXOrLiU-unsplash.jpg'
 import SaladItem from '../images/anna-pelzer-IGfIGP5ONV0-unsplash.jpg'
 import SaladItem2 from '../images/freddy-g-m3OuPu9oTuY-unsplash.jpg'
 import SaladItem3 from '../images/dovile-ramoskaite-xX9SmqQCbFY-unsplash.jpg'
+import menuPage from './menu'
 
 const homePage = (() => {
 
@@ -21,6 +22,7 @@ const homePage = (() => {
     const firstItemText = document.getElementById('first-item-button')
     const secondItemText = document.getElementById('second-item-button')
     const thirdItemText = document.getElementById('third-item-button')
+
 
     const domArray = [menuBtn,firstItemText,secondItemText,thirdItemText]
 
@@ -91,8 +93,9 @@ const homePage = (() => {
         mainMessage.textContent = "Experience the freshness of life!"
         searchBar.placeholder = "Search for a store near you!"
         searchBtn.textContent = "Search"
-        imageCredit.title = "my text"
         imageCredit.href = "https://unsplash.com/s/photos/salad?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+
+        searchBtn.id = "search-button"
     
         messageWrapper.appendChild(mainMessage)
         searchWrapper.appendChild(searchBar)
@@ -233,9 +236,10 @@ const homePage = (() => {
 
     return {
         render,
-        domArray
+        domArray,
+        menuBtn
     }
-
 })()
+
 
 export default homePage;

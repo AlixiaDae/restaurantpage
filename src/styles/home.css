@@ -3,6 +3,7 @@
     src: url(../CrabSalad.woff) format('woff');
 }
 
+
 body {
     margin: 0;
     min-height: 100vh;
@@ -259,11 +260,11 @@ body {
 }
 
 .footer-container {
-    height: 90px;
-    background-color: rgb(187, 2, 2);
+    height: 110px;
+    background-color: rgb(165, 3, 3);
     font-size: 24px;
     color: whitesmoke;
-    padding: 50px;
+    padding: 30px;
     align-items: center;
 }
 
@@ -293,6 +294,7 @@ body {
 .footer-left > p {
     cursor: default;
     margin: 0;
+    font-size: 24px;
 }
 
 .footer-logo {
@@ -300,7 +302,7 @@ body {
     font-size: 38px;
     flex-wrap: wrap;
     width: 150px;
-    cursor: pointer;
+    cursor: default;
     color: whitesmoke;
     justify-self: right;
 }
