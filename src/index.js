@@ -1,3 +1,3 @@
-import render from "./pages/home";
+import homePage from "./pages/home";
 
-render()
+homePage.render()

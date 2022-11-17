@@ -9,7 +9,6 @@ body {
 }
 
 .header-container {
-    background-image: url(../images/louis-hansel-MlPD-AzZYMg-unsplash.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -18,10 +17,13 @@ body {
 }
 
 .header-bar {
-    display: flex;
-    align-items: flex-start;
-    gap: 70px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr) 300px;
+    column-gap: 50px;
     padding: 30px 40px 30px 60px;
+    height: 130px;
+    align-items: center;
+    justify-items: center;
 }
 
 .logo,
@@ -34,14 +36,26 @@ body {
     font-size: 4rem;
     flex-wrap: wrap;
     width: 100px;
-    margin-top: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.order-button {
+    grid-area: 1/6;
+    color: white;
+    height: 70px;
+    padding: 20px;
+    font-size: 20px;
+    width: 200px;
+    background-color: #d11a2a;
+    border-radius: 30px;
+    border-style: none;
+    text-decoration: underline;
 }
 
 .header-page-tabs {
     display: flex;
-    gap: 10px;
-    margin-top: 30px;
-    margin-right: 40px;
+    gap: 5px;
 }
 
 .tab-buttons {
@@ -115,15 +129,17 @@ body {
     color: whitesmoke;
 }
 
+/*Sub content*/
 
-.content-container {
+.sub-content-container {
     display: grid;
-    grid-template: repeat(2,1fr)/1fr minmax(700px,1fr);
+    grid-template-columns: 1fr minmax(700px,1fr);
     justify-items: center;
     align-items: center;
     column-gap: 5px;
-    padding-top: 60px;
-    background-color: #181b1b;
+    padding: 40px;
+    height: 650px;
+    background-color: #081b02;
 }
 
 .sub-wrapper {
@@ -133,11 +149,12 @@ body {
     justify-content: center;
     text-align: center;
     margin-right: 160px;
+    margin-top: -150px;
     padding: 50px;
     box-shadow: -5px -5px 5px 5px rgb(170, 170, 170) inset;
     border-radius: 15px;
-    margin-top: -100px;
     background-color: white;
+    width: 500px;
 }
 
 .sub-header {
@@ -161,7 +178,8 @@ body {
 }
 
 .salad,
-.salad-2 {
+.salad-2,
+.items-wrapper > div > img {
     height: 400px;
     width: 400px;
     border-radius: 30px;
@@ -169,7 +187,7 @@ body {
 
 .salad {
     grid-area: 2/2;
-    margin-top: -130px;
+    margin-top: -190px;
     margin-left: -50px;
 }
 
@@ -178,8 +196,45 @@ body {
     margin-right: -90px;
 }
 
+/*Sub Content 2*/
+
+.sub-content-container2 {
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    box-shadow: 0px 7px 5px rgb(187, 187, 187) inset;
+}
+
+.favorites-wrapper {    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.favorites-header {
+    font-family: 'CrabSalad';
+    font-size: 45px;
+}
+
+.items-wrapper {
+    display: flex;
+    gap: 35px;
+    height: 300px;
+}
+
+.items-wrapper > div > p {
+    font-family: 'CrabSalad';
+    font-size: 37px;
+}
+
+
 
 /*Pseudo-classes*/
+
+.searchbar:focus {
+    outline: 1px solid black;
+}
 
 .search-button:hover {
     background-color: rgb(139, 34, 34);
@@ -191,4 +246,8 @@ body {
     font-size: 35px;
     margin: -1px;
     text-decoration: underline;
+}
+
+.order-button:hover {
+    background-color: #a31621;
 }
