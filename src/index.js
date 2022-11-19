@@ -1,6 +1,9 @@
-import homePage from "./pages/home";
-import menuPage from './pages/menu'
+import navBar from "./pages/navbar";
+import home from './pages/home'
 
 
-homePage.render()
 
+const content = document.getElementById('content')
+content.appendChild(navBar())
+
+document.body.appendChild(home())
