@@ -1,9 +1,17 @@
 import navBar from "./pages/navbar";
-import home from './pages/home'
+import homePage from './pages/homepage'
 
+function createContent() {
+    const content = document.createElement('div')
+    content.id = 'content'
+    document.body.appendChild(content)
+    return content
+}
 
+function loadPage(content) {
+    content.appendChild(navBar())
+    content.appendChild(homePage())
+}
 
-const content = document.getElementById('content')
-content.appendChild(navBar())
-
-document.body.appendChild(home())
+loadPage(createContent())
+loadPage(homePage())

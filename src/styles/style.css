@@ -12,7 +12,7 @@ body {
     display: grid;
     grid-template-columns: 100px repeat(3,350px) 1fr;
     background-color: rgba(0, 0, 0, 0.212);
-    padding: 20px 70px 45px 70px;
+    padding: 20px 70px 45px 100px;
     height: 100px;
     align-items: center;
     text-align: center;
@@ -45,18 +45,55 @@ body {
     grid-area: 1/5;
     justify-self: right;
     padding: 10px;
-    width: 130px;
+    height: 60px;
+    width: 140px;
     background-color: red;
     border-style: none;
     border-radius: 15px;
     font-size: 30px;
-    font-weight: bold;
     color: whitesmoke;
 }
+
+/*Main Menu*/
 
 .main-image {
     height: 650px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
 }
+
+.message-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 100px;
+    margin-left: 170px;
+}
+
+.main-message {
+    font-size: 44px;
+}
+
+.searchbar {
+    height: 60px;
+    width: 500px;
+    text-align: center;
+    border-style: none;
+    border-radius: 15px;
+    font-size: 25px;
+}
+
+.search-button {
+    width: 170px;
+    padding: 10px;
+    font-size: 32px;
+    border-style: none;
+    border-radius: 15px;
+    background-color: red;
+    color: whitesmoke;
+}
+
